@@ -1,3 +1,3 @@
 # BabyFeeding
 
-The App helps to track non-breast feeding for a baby  
+The App helps to track non-breast feeding for a baby
