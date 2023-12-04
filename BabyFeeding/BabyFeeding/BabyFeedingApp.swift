@@ -13,6 +13,7 @@ struct BabyFeedingApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .modelContainer(for: Record.self)
         }
     }
 }
