@@ -38,23 +38,24 @@ struct ContentView: View {
                 }
             }
             .sheet(isPresented: $showAddSheet){
-                VStack{
-                    TextField("Enter product name", text: $productName)
-                    TextField("Enter product company", text: $productCompany)
-                    Toggle(isOn: $isGoodReaction){
-                        Text("Is reaction good?")
-                    }.toggleStyle(.switch)
-                    Button("Add"){
-                        let record = Record(productName: productName, productCompany: productCompany, isGoodReaction: isGoodReaction)
-                        modelContext.insert(record)
-                        
-                        showAddSheet.toggle()
-                        
-                        productName = ""
-                        productCompany = ""
-                        isGoodReaction = true
-                    }
-                }
+//                VStack{
+//                    TextField("Enter product name", text: $productName)
+//                    TextField("Enter product company", text: $productCompany)
+//                    Toggle(isOn: $isGoodReaction){
+//                        Text("Is reaction good?")
+//                    }.toggleStyle(.switch)
+//                    Button("Add"){
+//                        let record = Record(productName: productName, productCompany: productCompany, isGoodReaction: isGoodReaction)
+//                        modelContext.insert(record)
+//                        
+//                        showAddSheet.toggle()
+//                        
+//                        productName = ""
+//                        productCompany = ""
+//                        isGoodReaction = true
+//                    }
+//                }
+                NewRecordView()
             }
             .overlay(alignment: .bottom){
                 Button("Add"){ showAddSheet.toggle() }.buttonStyle(.borderedProminent)
